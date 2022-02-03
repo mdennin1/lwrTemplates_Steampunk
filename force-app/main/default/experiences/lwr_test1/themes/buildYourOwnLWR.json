@@ -121,15 +121,6 @@
         "componentName" : "community_layout:section",
         "id" : "fe490caa-d054-4989-9b5c-8447b9dbdf77",
         "regions" : [ {
-          "components" : [ {
-            "componentAttributes" : {
-              "richTextValue" : "<div>\n    <p>footer placeholder</p>\n</div>"
-            },
-            "componentName" : "community_builder:htmlEditor",
-            "id" : "ef0075b4-267a-48d2-8647-5c5ac16fdc48",
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
           "id" : "5280c2bc-6df4-4345-8c42-7d9255eb18ab",
           "regionLabel" : "Theme Footer",
           "regionName" : "footerSection",
@@ -164,106 +155,6 @@
         "componentName" : "community_layout:section",
         "id" : "2e8aa1cb-aecd-4f52-b87d-4dc10090fad2",
         "regions" : [ {
-          "components" : [ {
-            "componentAttributes" : {
-              "backgroundColor" : "",
-              "bannerAlignment" : "center",
-              "bannerLinkAssistiveText" : "",
-              "buttonDirection" : "horizontal",
-              "buttonGroupAlignment" : "center",
-              "buttonGroupHeight" : 50,
-              "buttonGroupSpacingHorizontal" : "space-evenly",
-              "buttonGroupSpacingVertical" : "space-evenly",
-              "buttonGroupWidth" : 50,
-              "contentPadding" : "none",
-              "contentPosition" : "center center",
-              "contentWidth" : 50,
-              "height" : 450,
-              "imageFit" : "cover",
-              "imagePosition" : "center center",
-              "imageUrl" : "",
-              "isBannerLink" : false,
-              "overlayColor" : "",
-              "showButtons" : true,
-              "showSecondaryButton" : false,
-              "singleButtonAlignment" : "center",
-              "width" : 100
-            },
-            "componentName" : "dxp_content_layout:banner",
-            "id" : "fb8b57fa-10ff-40db-bb83-504bb86eb4ba",
-            "regions" : [ {
-              "components" : [ {
-                "componentAttributes" : {
-                  "backgroundColor" : "rgb(35, 35, 35)",
-                  "fontSize" : "heading-large",
-                  "headingTag" : "h1",
-                  "paddingHorizontal" : "none",
-                  "paddingVertical" : "none",
-                  "text" : "WELCOME TO STEAMPUNK",
-                  "textAlign" : "center",
-                  "textDecoration" : "{}"
-                },
-                "componentName" : "dxp_base:textBlock",
-                "id" : "fbd442b5-f989-4107-9fc1-78090c7a73a3",
-                "renditionMap" : { },
-                "type" : "component"
-              }, {
-                "componentAttributes" : {
-                  "backgroundColor" : "",
-                  "fontSize" : "heading-medium",
-                  "headingTag" : "h3",
-                  "paddingHorizontal" : "none",
-                  "paddingVertical" : "none",
-                  "text" : "LINKS\n",
-                  "textAlign" : "center",
-                  "textDecoration" : "{}"
-                },
-                "componentName" : "dxp_base:textBlock",
-                "id" : "7c8af30a-92c6-49f3-8332-d5c3b430ffcb",
-                "renditionMap" : { },
-                "type" : "component"
-              } ],
-              "id" : "b4659a97-6533-4d93-a68c-4d18f164f057",
-              "regionName" : "contentRegion",
-              "type" : "region"
-            }, {
-              "components" : [ {
-                "componentAttributes" : {
-                  "alignment" : "center",
-                  "size" : "standard",
-                  "stretch" : "standard",
-                  "text" : "Learn More",
-                  "type" : "primary"
-                },
-                "componentName" : "dxp_base:button",
-                "id" : "c73e6991-cb42-4050-93ed-24f22c81f26b",
-                "renditionMap" : { },
-                "type" : "component"
-              } ],
-              "id" : "46928a01-78bf-402e-b22e-8adaa1b121f0",
-              "regionName" : "bannerPrimaryButton",
-              "type" : "region"
-            }, {
-              "components" : [ {
-                "componentAttributes" : {
-                  "alignment" : "center",
-                  "size" : "standard",
-                  "stretch" : "standard",
-                  "text" : "Contact Us",
-                  "type" : "secondary"
-                },
-                "componentName" : "dxp_base:button",
-                "id" : "0ba20fb4-a42a-49e3-85a6-aebf82e16c44",
-                "renditionMap" : { },
-                "type" : "component"
-              } ],
-              "id" : "2e4ea7fc-1d04-4715-b29e-691a09904c84",
-              "regionName" : "bannerSecondaryButton",
-              "type" : "region"
-            } ],
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
           "id" : "5dac346d-6996-4d21-9671-ce144a83f17d",
           "regionLabel" : "Column 1",
           "regionName" : "headerSection",
@@ -287,22 +178,6 @@
         "componentName" : "community_layout:section",
         "id" : "b2aed45d-7f9d-40f0-979c-b73e4c70a4b2",
         "regions" : [ {
-          "components" : [ {
-            "componentAttributes" : {
-              "backgroundColor" : "",
-              "fontSize" : "heading-medium",
-              "headingTag" : "h3",
-              "paddingHorizontal" : "none",
-              "paddingVertical" : "none",
-              "text" : "Footer example",
-              "textAlign" : "center",
-              "textDecoration" : "{}"
-            },
-            "componentName" : "dxp_base:textBlock",
-            "id" : "a3ca7eba-742f-4857-b70d-5fa47b2d4303",
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
           "id" : "2fa2fd73-dd37-4e07-b00d-3409447f56c1",
           "regionLabel" : "Theme Footer",
           "regionName" : "footerSection",
@@ -325,99 +200,6 @@
       "regionName" : "body",
       "type" : "region"
     }, {
-      "components" : [ {
-        "componentAttributes" : {
-          "backgroundColor" : "",
-          "buttonDirection" : "horizontal",
-          "buttonGroupAlignment" : "center",
-          "buttonGroupHeight" : 45,
-          "buttonGroupSpacingHorizontal" : "space-evenly",
-          "buttonGroupSpacingVertical" : "space-evenly",
-          "buttonGroupWidth" : 75,
-          "height" : 325,
-          "isTileLink" : false,
-          "showButtons" : false,
-          "showSecondaryButton" : false,
-          "singleButtonAlignment" : "center",
-          "tileLinkAssistiveText" : "",
-          "width" : 38
-        },
-        "componentName" : "dxp_content_layout:tile",
-        "id" : "b4782f6c-0db1-4964-a8a1-3c7d3853d175",
-        "regions" : [ {
-          "components" : [ {
-            "componentAttributes" : {
-              "backgroundColor" : "",
-              "fontSize" : "heading-large",
-              "headingTag" : "h2",
-              "paddingHorizontal" : "xx-small",
-              "paddingVertical" : "medium",
-              "text" : "sidebar content",
-              "textAlign" : "center",
-              "textColor" : "rgb(241, 67, 247)",
-              "textDecoration" : "{\"bold\":true}"
-            },
-            "componentName" : "dxp_base:textBlock",
-            "id" : "3fbe6cbd-494d-479c-85d8-8c8eeb5353f5",
-            "renditionMap" : { },
-            "type" : "component"
-          }, {
-            "componentAttributes" : {
-              "backgroundColor" : "",
-              "fontSize" : "heading-medium",
-              "headingTag" : "h3",
-              "paddingHorizontal" : "none",
-              "paddingVertical" : "none",
-              "text" : "Your subheader goes here",
-              "textAlign" : "center",
-              "textDecoration" : "{}"
-            },
-            "componentName" : "dxp_base:textBlock",
-            "id" : "425035c8-7a19-4df8-8ac5-d018e0ca067c",
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
-          "id" : "8eabbc5f-9901-437e-9297-9397e9702995",
-          "regionName" : "contentRegion",
-          "type" : "region"
-        }, {
-          "components" : [ {
-            "componentAttributes" : {
-              "alignment" : "center",
-              "size" : "standard",
-              "stretch" : "standard",
-              "text" : "Learn More",
-              "type" : "primary"
-            },
-            "componentName" : "dxp_base:button",
-            "id" : "8b47202f-73d0-4066-a90f-b487b090710e",
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
-          "id" : "85ef67ae-cd5a-4391-8e6d-5213385337d8",
-          "regionName" : "tilePrimaryButton",
-          "type" : "region"
-        }, {
-          "components" : [ {
-            "componentAttributes" : {
-              "alignment" : "center",
-              "size" : "standard",
-              "stretch" : "standard",
-              "text" : "Contact Us",
-              "type" : "secondary"
-            },
-            "componentName" : "dxp_base:button",
-            "id" : "1be1d004-afeb-4fe8-9098-0b331106f274",
-            "renditionMap" : { },
-            "type" : "component"
-          } ],
-          "id" : "439a7d31-05e7-4f0d-9106-9b05a364d555",
-          "regionName" : "tileSecondaryButton",
-          "type" : "region"
-        } ],
-        "renditionMap" : { },
-        "type" : "component"
-      } ],
       "id" : "b91ad44a-f292-46b5-ab47-a150d28026fd",
       "regionName" : "sidebar",
       "type" : "region"

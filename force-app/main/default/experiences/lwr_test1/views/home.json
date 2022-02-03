@@ -13,23 +13,6 @@
       "componentName" : "community_layout:section",
       "id" : "fb4ff460-0ca6-4bef-b7a6-963979266145",
       "regions" : [ {
-        "components" : [ {
-          "componentAttributes" : {
-            "backgroundColor" : "",
-            "fontSize" : "heading-medium",
-            "headingTag" : "h3",
-            "paddingHorizontal" : "none",
-            "paddingVertical" : "none",
-            "text" : "test 1",
-            "textAlign" : "left",
-            "textDecoration" : "{}"
-          },
-          "componentName" : "dxp_base:textBlock",
-          "id" : "44efeea9-6785-4297-9241-3244f22c0d88",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
-        } ],
         "id" : "59d83270-998d-4a9d-b19e-ff228fb564be",
         "regionLabel" : "Column 1",
         "regionName" : "col1",
@@ -62,7 +45,7 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "Inner",
+  "themeLayoutType" : "5URS84D0pZ4unKWRo5IvvHFVFyoBTG",
   "type" : "view",
   "viewType" : "home"
 }
