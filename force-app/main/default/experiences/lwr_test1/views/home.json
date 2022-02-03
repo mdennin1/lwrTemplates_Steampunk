@@ -14,13 +14,6 @@
       "id" : "fb4ff460-0ca6-4bef-b7a6-963979266145",
       "regions" : [ {
         "components" : [ {
-          "componentAttributes" : { },
-          "componentName" : "c:textDisplay_test",
-          "id" : "77a29aa4-c4da-4d78-8cd6-8c91c96e67a3",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
-        }, {
           "componentAttributes" : {
             "backgroundColor" : "",
             "fontSize" : "heading-medium",
@@ -69,7 +62,7 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "5URS84D0pZ4unKWRo5IvvHFVFyoBTG",
+  "themeLayoutType" : "Inner",
   "type" : "view",
   "viewType" : "home"
 }

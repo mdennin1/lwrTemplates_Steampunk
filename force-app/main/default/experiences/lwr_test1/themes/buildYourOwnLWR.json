@@ -121,6 +121,15 @@
         "componentName" : "community_layout:section",
         "id" : "fe490caa-d054-4989-9b5c-8447b9dbdf77",
         "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "richTextValue" : "<div>\n    <p>footer placeholder</p>\n</div>"
+            },
+            "componentName" : "community_builder:htmlEditor",
+            "id" : "ef0075b4-267a-48d2-8647-5c5ac16fdc48",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
           "id" : "5280c2bc-6df4-4345-8c42-7d9255eb18ab",
           "regionLabel" : "Theme Footer",
           "regionName" : "footerSection",
