@@ -1,0 +1,16 @@
+<template>
+    <header>
+        <slot data-f6-region name='header'></slot>
+    </header>
+    <article class='slds-grid slds-wrap slds-gutters slds-p-around_x-small'>
+        <section class='slds-col slds-size_4-of-5'>
+            <slot data-f6-region></slot>
+        </section>
+        <aside class='slds-col slds-size_1-of-5'>
+            <slot data-f6-region name='sidebar'></slot>
+        </aside>
+    </article>
+    <footer>
+        <slot data-f6-region name='footer'></slot>
+    </footer>
+</template>
