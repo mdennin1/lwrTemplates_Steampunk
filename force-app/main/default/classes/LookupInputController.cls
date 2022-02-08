@@ -1,6 +1,6 @@
 public with sharing class LookupInputController{
     @AuraEnabled(cacheable = true)
-    public static List<LookupOption> getLookupOptions(Id recordId, String objectApiName, String fieldApiName){
+    public static List<LookupOption> getLookupOptions(String objectApiName, String fieldApiName){
         try {
             List<LookupOption> options = new List<LookupOption>();
             String query = 'SELECT Id, FieldApiName__c, Icon__c, Info__c, MasterLabel, Record_Type_Name__c, RelatedObjectApiName__c FROM Lookup__mdt WHERE ObjectApiName__c = :objectApiName AND FieldApiName__c = :fieldApiName';
@@ -41,7 +41,7 @@ public with sharing class LookupInputController{
         }
     }
     @AuraEnabled(cacheable = true)
-    public static List<LookupOption> getLookupOptions(Id recordId, String objectApiName, String fieldApiName, String keyword){
+    public static List<LookupOption> getLookupOptions(String objectApiName, String fieldApiName, String keyword){
         try {
             List<LookupOption> options = new List<LookupOption>();
             String query = 'SELECT Id, FieldApiName__c, Icon__c, Info__c, MasterLabel, Record_Type_Name__c, RelatedObjectApiName__c FROM Lookup__mdt WHERE ObjectApiName__c = :objectApiName AND FieldApiName__c = :fieldApiName';

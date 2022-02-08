@@ -4,10 +4,11 @@ import getLookupOptions from '@salesforce/apex/LookupInputController.getLookupOp
 
 export default class LookupInput extends LightningElement {
     //public props
-    @api recordId;
-    @api fieldApiName;
+    @api apiName;
+    @api disabled;
     @api label;
     @api objectApiName;
+    @api required;
     @api 
     get value(){
         return this._value;
@@ -24,7 +25,7 @@ export default class LookupInput extends LightningElement {
     _value;
     @track wiredResponse;
     //wired props
-    @wire(getLookupOptions, { recordId: '$recordId', objectApiName: '$objectApiName', fieldApiName: '$fieldApiName' })
+    @wire(getLookupOptions, { objectApiName: '$objectApiName', fieldApiName: '$fieldApiName' })
     getOptions(response){
         this.wiredResponse = response;
         const {data, error} = response;
@@ -34,8 +35,12 @@ export default class LookupInput extends LightningElement {
 
     //lifecycle hooks
     connectedCallback(){
-        console.log(`%c**lookup component ==> label: ${this.label}, recordId: ${this.recordId}, objectApiName: ${this.objectApiName}, fieldApiName: ${this.fieldApiName}, value: ${this.value}`, 'color:purple;');
+        console.log(`%c**lookup component ==>  apiName: ${this.apiName}, value: ${this.value}, label: ${this.label}, objectApiName: ${this.objectApiName}`, 'color:purple;');
     }
+    renderedCallback(){
+        this.disabled ? this.template.querySelector('input').disabled = true : this.template.querySelector('input').removeAttribute('disabled');
+    }
+
     //getters
 
     //private functions
@@ -51,10 +56,9 @@ export default class LookupInput extends LightningElement {
         if(keyCode == 13){
             if(!!this.keyword){
                 const keyword = this.keyword;
-                const recordId = this.recordId;
                 const objectApiName = this.objectApiName;
-                const fieldApiName = this.fieldApiName;
-                const options = await getLookupOptions(recordId, objectApiName, fieldApiName, keyword);
+                const fieldApiName = this.apiName;
+                const options = await getLookupOptions(objectApiName, fieldApiName, keyword);
                 console.log(`%c**keyword filtered options response: ${JSON.stringify(options)}`, 'color:blue;');
                 this.options = options;
             }
