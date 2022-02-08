@@ -1,0 +1,44 @@
+<template>
+    <template if:false={isField}>
+        <section class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent"></section>
+    </template>
+    <template if:true={isField}>
+        <!-- create mode -->
+        <template if:true={createMode}>
+            <!-- create inputs -->
+        </template>
+        <!-- edit mode -->
+        <template if:true={editMode}>
+            <template if:true={isLookup}>
+                <c-lookup-input record-id={recordId} field-api-name={apiName} label={label} object-api-name={objectInfo.apiName}></c-lookup-input>
+            </template>
+            <template if:true={defaultInput}>
+                <article class="slds-form-element">
+                    <label class="slds-form-element__label" for={apiName}>{label}</label>
+                    <section class="slds-form-element__control">
+                      <input type={inputTypeAttribute} id={apiName} data-id={apiName} placeholder="Placeholder text…" class="slds-input" value={value} oninput={handleInputChange} />
+                    </section>
+                </article>
+            </template>
+        </template>
+        <!-- view mode -->
+        <template if:true={viewMode}>
+            <section class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                <span class="slds-form-element__label">
+                    <template if:true={required}>
+                        <abbr class="slds-required" title="required">*</abbr>
+                    </template>
+                    {label}
+                </span>
+                <div class="slds-form-element__control">
+                    <div class="slds-form-element__static">
+                        {value}
+                    </div>
+                    <template if:true={updateable}>
+                        <lightning-button-icon data-id='edit_button' aria-label="Edit Button" title="Edit Button" alternative-text="Edit" icon-name="utility:edit" size="small" onclick={handleEditClick}></lightning-button-icon>
+                    </template>
+                </div>
+            </section>
+        </template>
+    </template>
+</template>

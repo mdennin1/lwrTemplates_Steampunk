@@ -4,6 +4,8 @@
     <isExposed>true</isExposed>
     <masterLabel>LWR Template: Header - Body - Sidebar Right - Footer</masterLabel>
     <targets>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Page_Layout</target>
         <target>lightningCommunity__Theme_Layout</target>
     </targets>
