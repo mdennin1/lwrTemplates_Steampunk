@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "c9c62997-d034-408e-9a1e-fb4ed029e458",
+  "favIconAssetRef" : null,
+  "headMarkup" : "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<title>Welcome to LWC Communities!</title>\n\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/styles.css?{ versionKey }\" />\n\n\n<!-- webruntime-branding-shared stylesheets -->\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }\" /><link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }\" />\n\n<style>\n    :root{\n        --dxp-g-root: #242424;\n        --dxp-g-root-contrast: #f143f7;\n        --dxp-g-root-1: #f143f7;\n        --dxp-g-root-contrast-1: #FFFFFF;\n        --dxp-g-brand: #f143f7;\n        --dxp-g-brand-contrast: #FFFFFF;\n        --dxp-g-brand-1: #f143f7;\n        --dxp-g-brand-contrast-1: #FFFFFF;\n        --dxp-g-success: #f143f7;\n        --dxp-g-success-contrast: #FFFFFF;\n        --dxp-g-success-1: #f143f7;\n        --dxp-g-success-contrast-1: #FFFFFF;\n        --dxp-g-info: #f143f7;\n        --dxp-g-info-contrast: #FFFFFF;\n\n        --dxp-s-button-color: #f143f7;\n        --dxp-s-text-heading-medium-color: #f143f7;\n    }\n</style>\n<!-- webruntime-branding-shared stylesheets -->",
+  "id" : "75b4eb7a-ba44-4da2-ac6e-4a3078b8c482",
+  "isRelaxedCSPLevel" : false,
+  "label" : "main",
+  "templateName" : "talon-template-byo",
+  "type" : "appPage"
+}

@@ -1,0 +1,49 @@
+<template>
+    <template if:false={isReady}>
+        <lightning-spinner alternative-text="Loading..." size="large" variant="brand"></lightning-spinner>
+    </template>
+    <template if:true={isReady}>
+        <article class="slds-card">
+            <template if:true={createMode}>
+                <article class="slds-grid slds-wrap slds-gutters">
+                    <template for:each={createInputs} for:item="input">
+                        <c-record-detail-input key={input.apiName} class="slds-col slds-size_1-of-2" api-name={input.apiName} record-input={recordInput} display-info={input} onrecordupdate={updateRecord}></c-record-detail-input>
+                    </template>
+                </article>
+            </template>
+            <template if:false={createMode}>
+                <article class="slds-accordion">
+                    <template for:each={sections} for:item="section">
+                        <div key={section.id} data-id={section.id} class="slds-section slds-is-open" onclick={toggleSection}>
+                            <h3 class="slds-section__title">{section.heading}</h3>
+                            <div class="slds-section__content">
+                                <form class="slds-form" role="list">
+                                    <template for:each={section.layoutRows} for:item="row" for:index="rowId">
+                                        <section key={row.id} class="slds-form__row">
+                                            <template for:each={row.layoutItems} for:item="item">
+                                                <section key={item.id} class="slds-form__item" role="listitem">
+                                                    <template for:each={item.layoutComponents} for:item="component">
+                                                        <c-record-detail-input key={component.apiName} api-name={component.apiName} layout-component={component} layout-item={item} mode={mode} object-info={objectInfo} record={record} record-input={recordInput} onclick={handleClick} onrecordupdate={updateRecord}></c-record-detail-input>
+                                                    </template>
+                                                </section>
+                                            </template>
+                                        </section>
+                                    </template> 
+                                </form>
+                            </div>
+                        </div>
+                    </template>
+                </article>
+            </template>
+            <template if:true={showSaveBtn}>
+                <footer>
+                    <article class="slds-p-around_medium slds-align_absolute-center">
+                        <section>
+                            <lightning-button label="Save" icon-name="utility:save" variant="success" onclick={save}></lightning-button>
+                        </section>
+                    </article>
+                </footer>
+            </template>
+        </article>
+    </template>
+</template>
