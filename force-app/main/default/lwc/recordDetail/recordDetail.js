@@ -21,6 +21,13 @@ export default class RecordDetail extends LightningElement {
         this._recordId = value;
     }
     @api 
+    get recordTypeId(){
+        return this._recordTypeId;
+    }
+    set recordTypeId(value){
+        this._recordTypeId = value;
+    }
+    @api 
     get objectApiName(){
         return this._objectApiName;
     }
@@ -47,11 +54,11 @@ export default class RecordDetail extends LightningElement {
     _mode = VIEW;
     _objectApiName;
     _recordId;
+    _recordTypeId;
     @track objectInfo;
     @track record;
     @track recordDefaults;
     @track recordInput;
-    recordTypeId;
     recordUi;
     
     //lifecycle hooks
@@ -75,15 +82,15 @@ export default class RecordDetail extends LightningElement {
         const { data, error } = response;
         if(!!data){
             const {layouts, objectInfos, records} = data;
-            const record = {...records?.[this.recordId]};
+            const record = records?.[this.recordId];
             this.record = record;
             this.recordTypeId = this.record?.recordTypeId;
             this.objectApiName = this.record?.apiName;
-            const objectInfo = {...objectInfos?.[this.objectApiName]};
+            const objectInfo = objectInfos?.[this.objectApiName];
             this.objectInfo = objectInfo;
             // console.log(`%c**objectApiName: ${this.objectApiName}, record: ${JSON.stringify(this.record)}, objectInfo: ${JSON.stringify(this.objectInfo)}`, 'color:purple;');
             const recordInput = generateRecordInputForUpdate(record, objectInfo);
-            this.recordInput = {...recordInput};
+            this.recordInput = recordInput;
             // console.log(`%c**recordInput: ${JSON.stringify(this.recordInput)}`, 'color:blue;font-weight:bold;');
 
         }
@@ -137,7 +144,7 @@ export default class RecordDetail extends LightningElement {
     //private functions
     buildRecordInputForCreate(){
         if(this.createMode && !this.recordInput && !!this.recordDefaults && !!this.objectInfo){
-            // console.log(`%c**recordDefaults: ${JSON.stringify(this.recordDefaults)}`, 'color:purple;');
+            console.log(`%c**recordDefaults: ${JSON.stringify(this.recordDefaults)}`, 'color:purple;');
             this.recordInput = generateRecordInputForCreate(this.recordDefaults, this.objectInfo);
         }
     }
@@ -176,7 +183,7 @@ export default class RecordDetail extends LightningElement {
     //public functions
     @api
     async save(event){
-        // console.log(`%c**save() fired`, 'color:red;');
+        console.log(`%c**save() fired`, 'color:red;');
         if(this.validate()){
             //save record
             try{
@@ -185,7 +192,7 @@ export default class RecordDetail extends LightningElement {
                 const recordInput = {...this.recordInput};
                 const updatedRecord = await save(recordInput);
                 fireToast(this, 'Record Saved', 'Successfully saved the record!', 'success');
-                // console.error(`**updatedRecord: ${JSON.stringify(updatedRecord)}`);
+                console.error(`**updatedRecord: ${JSON.stringify(updatedRecord)}`);
                 this.createMode ? this.recordId = updatedRecord?.id : refreshApex(this.recordUi);
                 this.mode = VIEW;
             }
