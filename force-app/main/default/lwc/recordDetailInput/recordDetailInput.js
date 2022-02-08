@@ -19,6 +19,7 @@ export default class RecordDetailInput extends LightningElement {
     //lifecycle hooks
     // connectedCallback(){
     //     console.log(`%c**mode: ${this.mode}, layoutComponent: ${JSON.stringify(this.layoutComponent)}, layoutItem: ${JSON.stringify(this.layoutItem)}`, 'color:red;');
+    //     console.log(`%c**objectInfo: ${JSON.stringify(this.objectInfo)}`, 'color:purple;font-size:small');
     // }
 
     //getters

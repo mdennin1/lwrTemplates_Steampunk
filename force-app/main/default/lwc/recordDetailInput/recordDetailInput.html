@@ -5,18 +5,38 @@
     <template if:true={isField}>
         <!-- create mode -->
         <template if:true={createMode}>
-            <!-- create inputs -->
+            <template if:true={isLookup}>
+                <c-lookup-input data-api-name={apiName} api-name={apiName} label={label} object-api-name={objectInfo.apiName}></c-lookup-input>
+            </template>
+            <template if:true={defaultInput}>
+                <article class="slds-form-element">
+                    <label class="slds-form-element__label" for={apiName}>
+                        <template if:true={required}>
+                            <abbr class="slds-required" title="required">*</abbr>
+                        </template>
+                        {label}
+                    </label>
+                    <section class="slds-form-element__control">
+                      <input type={inputTypeAttribute} id={apiName} data-api-name={apiName} placeholder="Placeholder text…" class="slds-input" value={value} oninput={handleInputChange} />
+                    </section>
+                </article>
+            </template>
         </template>
         <!-- edit mode -->
         <template if:true={editMode}>
             <template if:true={isLookup}>
-                <c-lookup-input record-id={recordId} field-api-name={apiName} label={label} object-api-name={objectInfo.apiName}></c-lookup-input>
+                <c-lookup-input data-api-api-name={apiName} api-name={apiName} label={label} object-api-name={objectInfo.apiName} required={required} value={layoutComponent.value}></c-lookup-input>
             </template>
             <template if:true={defaultInput}>
                 <article class="slds-form-element">
-                    <label class="slds-form-element__label" for={apiName}>{label}</label>
+                    <label class="slds-form-element__label" for={apiName}>
+                        <template if:true={required}>
+                            <abbr class="slds-required" title="required">*</abbr>
+                        </template>
+                        {label}
+                    </label>
                     <section class="slds-form-element__control">
-                      <input type={inputTypeAttribute} id={apiName} data-id={apiName} placeholder="Placeholder text…" class="slds-input" value={value} oninput={handleInputChange} />
+                      <input type={inputTypeAttribute} id={apiName} data-api-name={apiName} placeholder="Placeholder text…" class="slds-input" value={value} oninput={handleInputChange} />
                     </section>
                 </article>
             </template>
